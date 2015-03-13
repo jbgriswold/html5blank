@@ -4,13 +4,23 @@
  * Main `sass` file. Import here `sass` files
  */
 
+@import "compass/typography/vertical_rhythm";
+@import "compass/layout/grid-background";
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/general/float";
+
 // Modules
 @import "modules/variables";
 @import "modules/mixins";
-@import "modules/fonts";
+// @import "modules/fonts";
+
+/* copied from the Cat Town css */
+@import 'partials/base'; //reset
+
+@import 'colours';
 
 // Partials
-@import "partials/reset";
+// @import "partials/reset";
 @import "partials/wordpress";
 @import "partials/utils";
 @import "partials/wrapper";
@@ -19,3 +29,39 @@
 @import "partials/sidebar";
 @import "partials/footer";
 @import "partials/print";
+
+a.img { display: block }
+.img img { padding: .75em; }
+
+body { @include baseline-grid-background(1.5em, #ccc); }
+/*
+@include establish-baseline;
+@if true {
+	$grid-background-baseline-height: $base-line-height;
+	body {
+		@include debug-vertical-alignment;
+	}
+}
+*/
+
+
+// $color : rgb(204,102,51);
+$primary: #228866;
+$secondary: #cc6633;
+// @include complement($primary);
+// $orange : rgb(204,102,51);
+// $secondary : $orange;
+
+// $midgrn : rgb(199,231,217);
+// $primary : $midgrn;
+
+// mid	darker	darkest	lighter	lightest
+// 228866	2D6653	0B583F	55C39F	73C3A9
+
+/* copied from the Cat Town css */
+@import 'menu';
+// @import 'typo';
+// @import 'layout';
+
+
+

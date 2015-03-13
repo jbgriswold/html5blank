@@ -1,0 +1,20 @@
+/**
+ * partials/utils
+ * ---
+ * Utils classes
+ */
+
+
+/* General utility css classes */
+.floatR { float: right; }
+.floatL { float: left; }
+.L { text-align: left; }
+.C { text-align: center; }
+.R { text-align: right; }
+.clearR { clear: right; }
+.clearL { clear: left; }
+.clear { clear: both; }
+
+.reset-box {
+  @include reset-box;
+}

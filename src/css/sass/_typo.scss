@@ -1,0 +1,31 @@
+body { font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Roboto Slab', 'Rockwell', sans-serif; }
+
+h1 { text-align: center; }
+
+h1 { @include adjust-font-size-to(48px); }
+h2 { @include adjust-font-size-to(36px); }
+h3 { @include adjust-font-size-to(30px); }
+h4 { @include adjust-font-size-to(24px); }
+h5 { @include adjust-font-size-to(21px); }
+h6 { @include adjust-font-size-to(18px); }
+/* standard text size is 16px */
+aside { @include adjust-font-size-to(14px); }
+
+h1,h2,h3,h4,p {
+	@include rhythm(0,0,0,1,1em);
+}
+
+footer p {
+	@include rhythm(1,0,0,1,1em);
+}
+
+@media only screen and (max-width: 479px) {
+	h1 { @include adjust-font-size-to(36px); }
+	h2 { @include adjust-font-size-to(30px); }
+	h3 { @include adjust-font-size-to(24px); }
+	h4 { @include adjust-font-size-to(22px); }
+	h5 { @include adjust-font-size-to(20px); }
+	h6 { @include adjust-font-size-to(18px); }
+}
